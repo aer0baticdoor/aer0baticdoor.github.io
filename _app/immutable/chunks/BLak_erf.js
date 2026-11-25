@@ -1,0 +1,1 @@
+function e(e){let t=e.replace(/^Recipe — /,``);return t.charAt(0).toUpperCase()+t.slice(1)}export{e as t};

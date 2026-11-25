@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="text-scale" content="scale" />
+		<meta name="color-scheme" content="dark light" />
+		<meta name="theme-color" content="#0f0e12" />
+		<script>
+			// Apply the saved theme before first paint, so there is no flash of the wrong one.
+			// The key must match THEME_STORAGE_KEY in src/lib/ui/theme.svelte.ts.
+			try {
+				var saved = localStorage.getItem('opxy:theme');
+				if (saved === 'light' || saved === 'dark') {
+					document.documentElement.dataset.theme = saved;
+					if (saved === 'light') {
+						document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f5f5');
+					}
+				}
+				// The manual's sidebar, folded to icons or not (key: FOLD_KEY in routes/manual/+layout).
+				if (localStorage.getItem('opxy:manual-sidebar') === 'collapsed') {
+					document.documentElement.dataset.manualSidebar = 'collapsed';
+				}
+			} catch (e) {
+				// Storage blocked: stay on the default (dark) theme.
+			}
+			// A phone gets a preview and a note instead of the app, which needs a computer (PhoneNote,
+			// read by the root layout). A phone is a touch screen with no hover whose short side is
+			// under 600 px: tablets, and laptops with touch screens, keep the app.
+			if (
+				matchMedia('(hover: none) and (pointer: coarse)').matches &&
+				Math.min(screen.width, screen.height) < 600
+			) {
+				document.documentElement.dataset.device = 'phone';
+			}
+		</script>
+		<link href="/_app/immutable/entry/start.CjDOmdUh.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BXwEHIV8.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BEyvD6nd.js" rel="modulepreload">
+		<link href="/_app/immutable/entry/app.DQgf9plW.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/uBIymjUX.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="/_app/immutable/nodes/0.CEbDZKPQ.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Cw3A84wO.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D0nl0x45.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DX1Etksf.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CRFzPm5x.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DUzqBu6D.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BLGL26yp.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DdZuMcFP.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BSU8-QK7.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CXLSkzks.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BGnqLfXC.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/B7Z3ySBL.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Eeb6sWI-.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/uevAzKav.js" rel="modulepreload">
+		
+		<link href="/_app/immutable/assets/replica.DVkaYWit.css" rel="stylesheet">
+		<link href="/_app/immutable/assets/ui.DTdLmS7P.css" rel="stylesheet">
+		<link href="/_app/immutable/assets/app.DJgyRkPq.css" rel="stylesheet">
+		<link href="/_app/immutable/assets/0.Di1zy1p0.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_1y6to9m = {
+						base: ""
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.CjDOmdUh.js"),
+						import("/_app/immutable/entry/app.DQgf9plW.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

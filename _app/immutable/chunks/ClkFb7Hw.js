@@ -1,0 +1,9229 @@
+var e=`{
+	"about": "The OP-XY’s pages as OP-XY Agent’s simulator draws them, generated from it by scripts/build-device-map.mjs (src/lib/sim/device-map.ts); do not edit by hand. For each page: the keys from a new project, what the screen says there, and each encoder on each layer with its label, range and display format (found by turning it end to end on a copy), what a click does, the CC on its lane with what the owner’s unit did with that CC on OS 1.1.33 (answers: the page moved; ignores: it did not; untested), and the note of our manual. The values of a page are a new project’s on the track its path picks. Every page is built, and its path played, on the simulator running OS 1.2.1 (\`firmware\`), the OS the replica runs, so the keys are the replica’s. Pages tagged with an \`os\` (drumline, the dynamic filter, the 1.2 system and preset settings pages) exist from that OS on; the rest are on OS 1.1.33 too, and where a page’s keys or values differ there its note says so (the preset browser opens by engine on 1.1.33 and by category from 1.2).",
+	"firmware": "1.2.1",
+	"layers": {
+		"base": "turn the encoder",
+		"shift": "hold shift and turn it",
+		"alt": "turn it on the page’s other view (M2: a click shows the filter envelope)",
+		"click": "push the encoder",
+		"shift-click": "hold shift and push it"
+	},
+	"pages": [
+		{
+			"id": "instrument.m1.axis",
+			"name": "axis engine (M1)",
+			"area": "instrument",
+			"track": 7,
+			"path": [
+				{
+					"keys": "T7"
+				}
+			],
+			"screen": "axis: tone 34, ratio 48, shape 18, tremolo 16",
+			"units": [
+				"instrument.engine-axis"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "tone",
+					"param": "m1.1",
+					"value": "34",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "darker ↔ brighter"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "ratio",
+					"param": "m1.2",
+					"value": "48",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "0–50 detune, 51–100 fifths"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "shape",
+					"param": "m1.3",
+					"value": "18",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "wave shape of the oscillators"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "tremolo",
+					"param": "m1.4",
+					"value": "16",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "speed and depth of a volume wobble, on one control"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.dissolve",
+			"name": "dissolve engine (M1)",
+			"area": "instrument",
+			"track": 5,
+			"path": [
+				{
+					"keys": "T5"
+				}
+			],
+			"screen": "dissolve: swarm 00, am 08, fm 32, detune 00",
+			"units": [
+				"instrument.engine-dissolve"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "swarm",
+					"param": "m1.1",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "noise modulating the oscillators"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "am",
+					"param": "m1.2",
+					"value": "08",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "amplitude modulation, for grit"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "fm",
+					"param": "m1.3",
+					"value": "32",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "frequency modulation, for more tonal colour"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "detune",
+					"param": "m1.4",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "slight pitch offsets between oscillators, for a fuller sound"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.drum",
+			"name": "drum engine (M1)",
+			"area": "instrument",
+			"track": 1,
+			"path": [],
+			"screen": "drum key F3: tune +0.00, play mode oneshot",
+			"shiftScreen": "drum key F3 (shift): direction forward, pan 0, fade 00, gain 0",
+			"units": [
+				"sampler.drum-key-settings",
+				"sampler.drum-sampler"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "tune",
+					"param": "key.tune",
+					"value": "+0.00",
+					"range": {
+						"first": "–48.00",
+						"last": "+48.00",
+						"detents": 960,
+						"step": 0.1,
+						"fine": 0.01
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "start",
+					"param": "key.start",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					},
+					"about": "push in for finer steps"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "end",
+					"param": "key.end",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "play mode",
+					"param": "key.playMode",
+					"value": "oneshot",
+					"range": {
+						"first": "key",
+						"last": "loop",
+						"detents": 3,
+						"values": [
+							"key",
+							"oneshot",
+							"mute group",
+							"loop"
+						]
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "direction",
+					"param": "key.reverse",
+					"value": "forward",
+					"range": {
+						"first": "reverse",
+						"last": "forward",
+						"detents": 1,
+						"values": [
+							"reverse",
+							"forward"
+						]
+					},
+					"midi": {
+						"cc": 16,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "pan",
+					"param": "key.pan",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 100,
+						"step": 2,
+						"fine": 1
+					},
+					"midi": {
+						"cc": 17,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "fade",
+					"param": "key.fade",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 18,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "gain",
+					"param": "key.gain",
+					"value": "0",
+					"range": {
+						"first": "-30",
+						"last": "20",
+						"detents": 50,
+						"step": 1
+					},
+					"midi": {
+						"cc": 19,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "waves 1 99ggggeeffcceeffccccccccbbccbbaabbaaaaaabbbbbb888aa88aa888888887766666677777766666666776666665555665555555544445544333344444444443333333333333333333223333223322222222222222222222221122112211111122111111111111111111111111111111111111111111111111111110011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 → 99999999999999999999999999999999gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefffffffffffffffffffffffffffffffffcccccccccccccccccccccccccccccccceeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeefffffffffffffffffffffffffffffffffcccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbcccccccccccccccccccccccccccccccccbbbbbbbbbbbbbbbb"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "waves 1 99ggggeeffcceeffccccccccbbccbbaabbaaaaaabbbbbb888aa88aa888888887766666677777766666666776666665555665555555544445544333344444444443333333333333333333223333223322222222222222222222221122112211111122111111111111111111111111111111111111111111111111111110011110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 → 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.epiano",
+			"name": "epiano engine (M1)",
+			"area": "instrument",
+			"track": 4,
+			"path": [
+				{
+					"keys": "T4"
+				}
+			],
+			"screen": "epiano: tone 00, texture 00, tine 41, punch 53",
+			"units": [
+				"instrument.engine-epiano"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "tone",
+					"param": "m1.1",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "darker ↔ brighter"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "texture",
+					"param": "m1.2",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "adds grit"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "tine",
+					"param": "m1.3",
+					"value": "41",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "bright, metallic attack at the start of each note; the guide puts it on \`E4\`"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "punch",
+					"param": "m1.4",
+					"value": "53",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "adds movement; the guide puts it on \`E3\`"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.hardsync",
+			"name": "hardsync engine (M1)",
+			"area": "instrument",
+			"track": 6,
+			"path": [
+				{
+					"keys": "T6"
+				}
+			],
+			"screen": "hardsync: freq 13, sub 08, noise 99, lowcut 18",
+			"units": [
+				"instrument.engine-hardsync"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "freq",
+					"param": "m1.1",
+					"value": "13",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "shifts the harmonics, changing the tone"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "sub",
+					"param": "m1.2",
+					"value": "08",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "adds a sub-bass layer underneath"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "noise",
+					"param": "m1.3",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "adds noise to brighten the sound"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "lowcut",
+					"param": "m1.4",
+					"value": "18",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "removes low frequencies"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.multisampler",
+			"name": "multisampler engine (M1)",
+			"area": "instrument",
+			"track": 8,
+			"path": [
+				{
+					"keys": "T8"
+				}
+			],
+			"screen": "multisampler zone F3: tune +0.00",
+			"shiftScreen": "multisampler zone F3 (shift): tune +0.00",
+			"units": [
+				"sampler.multisampler",
+				"sampler.synth-sampler"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "start",
+					"param": "sample.start",
+					"value": "0%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.7%"
+						]
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "loop start",
+					"param": "sample.loopStart",
+					"value": "20%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.7%"
+						]
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "loop end",
+					"param": "sample.loopEnd",
+					"value": "80%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.7%"
+						]
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "end",
+					"param": "sample.end",
+					"value": "100%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.8%"
+						]
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "direction",
+					"param": "sample.reverse",
+					"value": "forward",
+					"range": {
+						"first": "reverse",
+						"last": "forward",
+						"detents": 1,
+						"values": [
+							"reverse",
+							"forward"
+						]
+					},
+					"midi": {
+						"cc": 16,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "tune",
+					"param": "sample.tune",
+					"value": "+0.00",
+					"range": {
+						"first": "–48.00",
+						"last": "+48.00",
+						"detents": 960,
+						"step": 0.1,
+						"fine": 0.01
+					},
+					"midi": {
+						"cc": 17,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "loop crossfade",
+					"param": "sample.crossfade",
+					"value": "0%",
+					"range": {
+						"first": "0%",
+						"last": "75%",
+						"detents": 75,
+						"step": 1
+					},
+					"midi": {
+						"cc": 18,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					},
+					"about": "smooths the loop, e.g. for pads"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "gain",
+					"param": "sample.gain",
+					"value": "0",
+					"range": {
+						"first": "-30",
+						"last": "20",
+						"detents": 50,
+						"step": 1
+					},
+					"midi": {
+						"cc": 19,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "zoomed in on the start"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "zoomed in on the loop start"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "zoomed in on the loop end"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "zoomed in on the end"
+				},
+				{
+					"keys": "shift + click E3",
+					"layer": "shift-click",
+					"encoder": 3,
+					"label": "loop type",
+					"does": "loop type forever → release"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.organ",
+			"name": "organ engine (M1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": -1
+				},
+				{
+					"keys": "click E2"
+				}
+			],
+			"screen": "organ: type 65, bass 96, tremolo amount 00, tremolo speed 09",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.engine-organ"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "type",
+					"param": "m1.1",
+					"value": "65",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "organ model"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "bass",
+					"param": "m1.2",
+					"value": "96",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "adds or removes low end"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "tremolo amount",
+					"param": "m1.3",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "depth of the volume wobble"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "tremolo speed",
+					"param": "m1.4",
+					"value": "09",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "slow swells ↔ fast, dizzy wobble"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.prism",
+			"name": "prism engine (M1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				}
+			],
+			"screen": "prism: shape 15, ratio 2:1, detune 05, stereo 22",
+			"units": [
+				"instrument.engine-prism"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "shape",
+					"param": "m1.1",
+					"value": "15",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "waveform of the oscillators"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "ratio",
+					"param": "m1.2",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "94",
+						"detents": 9,
+						"values": [
+							"00",
+							"15",
+							"25",
+							"35",
+							"45",
+							"54",
+							"64",
+							"74",
+							"84",
+							"94"
+						],
+						"shows": [
+							{
+								"from": "00",
+								"to": "00",
+								"shows": "2:1"
+							},
+							{
+								"from": "15",
+								"to": "15",
+								"shows": "1:1"
+							},
+							{
+								"from": "25",
+								"to": "25",
+								"shows": "2:3"
+							},
+							{
+								"from": "35",
+								"to": "35",
+								"shows": "1:2"
+							},
+							{
+								"from": "45",
+								"to": "45",
+								"shows": "1:3"
+							},
+							{
+								"from": "54",
+								"to": "54",
+								"shows": "1:4"
+							},
+							{
+								"from": "64",
+								"to": "64",
+								"shows": "1:6"
+							},
+							{
+								"from": "74",
+								"to": "74",
+								"shows": "1:8"
+							},
+							{
+								"from": "84",
+								"to": "84",
+								"shows": "1:12"
+							},
+							{
+								"from": "94",
+								"to": "94",
+								"shows": "1:16"
+							}
+						]
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "tuning ratio between the oscillators"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "detune",
+					"param": "m1.3",
+					"value": "05",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "small pitch offset between the oscillators, for a thicker sound"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "stereo",
+					"param": "m1.4",
+					"value": "22",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how far the oscillators spread across the stereo field"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.sampler",
+			"name": "sampler engine (M1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 1
+				},
+				{
+					"keys": "click E2"
+				}
+			],
+			"screen": "sampler, root C: tune +0.00",
+			"shiftScreen": "sampler, root C (shift): tune +0.00",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"sampler.synth-sampler"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "start",
+					"param": "sample.start",
+					"value": "0%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.7%"
+						]
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "loop start",
+					"param": "sample.loopStart",
+					"value": "20%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.7%"
+						]
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "loop end",
+					"param": "sample.loopEnd",
+					"value": "80%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.7%"
+						]
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "end",
+					"param": "sample.end",
+					"value": "100%",
+					"range": {
+						"first": "0%",
+						"last": "100%",
+						"detents": 575,
+						"examples": [
+							"14.3%",
+							"28.5%",
+							"42.8%",
+							"57.2%",
+							"71.5%",
+							"85.8%"
+						]
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "ignores",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "direction",
+					"param": "sample.reverse",
+					"value": "forward",
+					"range": {
+						"first": "reverse",
+						"last": "forward",
+						"detents": 1,
+						"values": [
+							"reverse",
+							"forward"
+						]
+					},
+					"midi": {
+						"cc": 16,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "tune",
+					"param": "sample.tune",
+					"value": "+0.00",
+					"range": {
+						"first": "–48.00",
+						"last": "+48.00",
+						"detents": 960,
+						"step": 0.1,
+						"fine": 0.01
+					},
+					"midi": {
+						"cc": 17,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "loop crossfade",
+					"param": "sample.crossfade",
+					"value": "0%",
+					"range": {
+						"first": "0%",
+						"last": "75%",
+						"detents": 75,
+						"step": 1
+					},
+					"midi": {
+						"cc": 18,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					},
+					"about": "smooths the loop, e.g. for pads"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "gain",
+					"param": "sample.gain",
+					"value": "0",
+					"range": {
+						"first": "-30",
+						"last": "20",
+						"detents": 50,
+						"step": 1
+					},
+					"midi": {
+						"cc": 19,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "speculative"
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "zoomed in on the start"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "zoomed in on the loop start"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "zoomed in on the loop end"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "zoomed in on the end"
+				},
+				{
+					"keys": "shift + click E3",
+					"layer": "shift-click",
+					"encoder": 3,
+					"label": "loop type",
+					"does": "loop type forever → release"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.simple",
+			"name": "simple engine (M1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 2
+				},
+				{
+					"keys": "click E2"
+				}
+			],
+			"screen": "simple: shape 46, pw 66, noise 20, stereo 18",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.engine-simple"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "shape",
+					"param": "m1.1",
+					"value": "46",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "oscillator waveform"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "pw",
+					"param": "m1.2",
+					"value": "66",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "pulse width"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "noise",
+					"param": "m1.3",
+					"value": "20",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "noise level, from buzzy leads to soft pads"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "stereo",
+					"param": "m1.4",
+					"value": "18",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "stereo spread of the oscillators"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.wavetable",
+			"name": "wavetable engine (M1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 3
+				},
+				{
+					"keys": "click E2"
+				}
+			],
+			"screen": "wavetable: basic, position 95, warp 00, drift 00",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.engine-wavetable"
+			],
+			"captured": "59 §2.5",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "table",
+					"param": "m1.1",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "94",
+						"detents": 8,
+						"values": [
+							"00",
+							"17",
+							"28",
+							"39",
+							"50",
+							"61",
+							"72",
+							"83",
+							"94"
+						],
+						"shows": [
+							{
+								"from": "00",
+								"to": "00",
+								"shows": "basic"
+							},
+							{
+								"from": "17",
+								"to": "17",
+								"shows": "buzz"
+							},
+							{
+								"from": "28",
+								"to": "28",
+								"shows": "crush"
+							},
+							{
+								"from": "39",
+								"to": "39",
+								"shows": "drawbars"
+							},
+							{
+								"from": "50",
+								"to": "50",
+								"shows": "fibonacci"
+							},
+							{
+								"from": "61",
+								"to": "61",
+								"shows": "fractal"
+							},
+							{
+								"from": "72",
+								"to": "72",
+								"shows": "geometric"
+							},
+							{
+								"from": "83",
+								"to": "83",
+								"shows": "primes"
+							},
+							{
+								"from": "94",
+								"to": "94",
+								"shows": "zap"
+							}
+						]
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "position",
+					"param": "m1.2",
+					"value": "95",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "place within the table"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "warp",
+					"param": "m1.3",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "bends the shape of the waveform"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "drift",
+					"param": "m1.4",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "lets the warp wander from the note's pitch, for inharmonic tones"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.midi",
+			"name": "midi engine (M1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 4
+				},
+				{
+					"keys": "click E2"
+				}
+			],
+			"screen": "midi: channel 1, bank none, program 1",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.engine-midi"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "channel",
+					"param": "channel",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "16",
+						"detents": 15,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "MIDI channel the track sends on"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "bank",
+					"param": "bank",
+					"value": "none",
+					"range": {
+						"first": "none",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "program",
+					"param": "midi.program",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "128",
+						"detents": 127,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					}
+				}
+			]
+		},
+		{
+			"id": "instrument.m2",
+			"name": "envelopes (M2; shift: play mode)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "amp envelope: attack 00, decay 31, sustain 38, release 79",
+			"shiftScreen": "play mode mono, portamento off, bend 2 semitones, volume 75",
+			"altScreen": "filter envelope: attack 00, decay 63, sustain 67, release 28",
+			"units": [
+				"instrument.envelopes",
+				"instrument.play-mode"
+			],
+			"captured": "59 §2.2",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "attack",
+					"param": "amp.attack",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 20,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "time to reach full level"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "decay",
+					"param": "amp.decay",
+					"value": "31",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 21,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "time to fall to the sustain level"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "sustain",
+					"param": "amp.sustain",
+					"value": "38",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 22,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "level held while the key is down"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "release",
+					"param": "amp.release",
+					"value": "79",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 23,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "fade-out after the key is let go; clockwise moves the release handle right, a shorter release"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "play mode",
+					"param": "playMode.mode",
+					"value": "mono",
+					"range": {
+						"first": "poly",
+						"last": "legato",
+						"detents": 2,
+						"values": [
+							"poly",
+							"mono",
+							"legato"
+						]
+					},
+					"midi": {
+						"cc": 28,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "portamento",
+					"param": "playMode.portamento",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"midi": {
+						"cc": 29,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					},
+					"about": "how long a note takes to slide to the next"
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "bend",
+					"param": "playMode.bend",
+					"value": "02",
+					"range": {
+						"first": "00",
+						"last": "12",
+						"detents": 8,
+						"values": [
+							"00",
+							"01",
+							"02",
+							"03",
+							"04",
+							"05",
+							"06",
+							"07",
+							"12"
+						],
+						"shows": [
+							{
+								"from": "00",
+								"to": "00",
+								"shows": "off"
+							},
+							{
+								"from": "01",
+								"to": "01",
+								"shows": "1 semitone"
+							},
+							{
+								"from": "02",
+								"to": "02",
+								"shows": "2 semitones"
+							},
+							{
+								"from": "03",
+								"to": "03",
+								"shows": "3 semitones"
+							},
+							{
+								"from": "04",
+								"to": "04",
+								"shows": "4 semitones"
+							},
+							{
+								"from": "05",
+								"to": "05",
+								"shows": "5 semitones"
+							},
+							{
+								"from": "06",
+								"to": "06",
+								"shows": "6 semitones"
+							},
+							{
+								"from": "07",
+								"to": "07",
+								"shows": "7 semitones"
+							},
+							{
+								"from": "12",
+								"to": "12",
+								"shows": "octave"
+							}
+						]
+					},
+					"midi": {
+						"cc": 30,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					},
+					"about": "pitch reach of the pitchbend strip"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "volume",
+					"param": "playMode.volume",
+					"value": "75",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 31,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					},
+					"about": "level stored with the sound, apart from the mixer, for matching presets"
+				},
+				{
+					"keys": "turn E1",
+					"layer": "alt",
+					"encoder": 1,
+					"label": "attack",
+					"param": "filterEnv.attack",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 24,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "alt",
+					"encoder": 2,
+					"label": "decay",
+					"param": "filterEnv.decay",
+					"value": "63",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 25,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "alt",
+					"encoder": 3,
+					"label": "sustain",
+					"param": "filterEnv.sustain",
+					"value": "67",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 26,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "alt",
+					"encoder": 4,
+					"label": "release",
+					"param": "filterEnv.release",
+					"value": "28",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 27,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "clockwise is shorter, as for the amp release"
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "amp envelope → filter envelope"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "amp envelope → filter envelope"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "amp envelope → filter envelope"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "amp envelope → filter envelope"
+				}
+			]
+		},
+		{
+			"id": "instrument.m3",
+			"name": "filter (M3; shift: sends)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "svf filter: cutoff 00, resonance 09, envelope amount 33, key tracking 17",
+			"shiftScreen": "sends: aux 00, tape 99, fx I 00, fx II 00",
+			"units": [
+				"instrument.filter",
+				"instrument.track-sends"
+			],
+			"captured": "59 §2.3",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "cutoff",
+					"param": "filter.cutoff",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 32,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "community-verified"
+					},
+					"about": "frequency where the filter acts"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "resonance",
+					"param": "filter.resonance",
+					"value": "09",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 33,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "peak at the cutoff that exaggerates the filter"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "env amount",
+					"param": "filter.envAmount",
+					"value": "33",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 34,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how far the \`M2\` filter envelope sweeps the cutoff"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "key tracking",
+					"param": "filter.keyTracking",
+					"value": "17",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 35,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "ties the cutoff to the pitch of each note"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "aux out",
+					"param": "sends.aux",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 36,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "tape",
+					"param": "sends.tape",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 37,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "fx I",
+					"param": "sends.fx1",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 38,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "community-verified"
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "fx II",
+					"param": "sends.fx2",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 39,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					}
+				}
+			]
+		},
+		{
+			"id": "instrument.m4.duck",
+			"name": "duck LFO (M4)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "shift + M4"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": -3
+				},
+				{
+					"keys": "click E1"
+				}
+			],
+			"screen": "duck lfo: source 1 (audio), amount 0, hold 50, release 50",
+			"units": [
+				"instrument.lfo-duck",
+				"instrument.lfo"
+			],
+			"captured": "59 §2.4",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "source",
+					"param": "lfo.source",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "metronome",
+						"detents": 16,
+						"examples": [
+							"3",
+							"6",
+							"8",
+							"10",
+							"12",
+							"15"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "track 1–16 or the metronome"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "lfo.amount",
+					"value": "0",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "depth of the dip"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "hold",
+					"param": "lfo.hold",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1,
+						"shows": [
+							{
+								"from": "00",
+								"to": "00",
+								"shows": "0"
+							},
+							{
+								"from": "01",
+								"to": "01",
+								"shows": "1"
+							},
+							{
+								"from": "02",
+								"to": "02",
+								"shows": "2"
+							},
+							{
+								"from": "03",
+								"to": "03",
+								"shows": "3"
+							},
+							{
+								"from": "04",
+								"to": "04",
+								"shows": "4"
+							},
+							{
+								"from": "05",
+								"to": "05",
+								"shows": "5"
+							},
+							{
+								"from": "06",
+								"to": "06",
+								"shows": "6"
+							},
+							{
+								"from": "07",
+								"to": "07",
+								"shows": "7"
+							},
+							{
+								"from": "08",
+								"to": "08",
+								"shows": "8"
+							},
+							{
+								"from": "09",
+								"to": "09",
+								"shows": "9"
+							}
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how long the dip lasts"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "release",
+					"param": "lfo.release",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1,
+						"shows": [
+							{
+								"from": "00",
+								"to": "00",
+								"shows": "0"
+							},
+							{
+								"from": "01",
+								"to": "01",
+								"shows": "1"
+							},
+							{
+								"from": "02",
+								"to": "02",
+								"shows": "2"
+							},
+							{
+								"from": "03",
+								"to": "03",
+								"shows": "3"
+							},
+							{
+								"from": "04",
+								"to": "04",
+								"shows": "4"
+							},
+							{
+								"from": "05",
+								"to": "05",
+								"shows": "5"
+							},
+							{
+								"from": "06",
+								"to": "06",
+								"shows": "6"
+							},
+							{
+								"from": "07",
+								"to": "07",
+								"shows": "7"
+							},
+							{
+								"from": "08",
+								"to": "08",
+								"shows": "8"
+							},
+							{
+								"from": "09",
+								"to": "09",
+								"shows": "9"
+							}
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how long the level takes to recover"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "source type",
+					"param": "source type",
+					"value": "audio",
+					"range": {
+						"first": "audio",
+						"last": "notes",
+						"detents": 1,
+						"values": [
+							"audio",
+							"notes"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"label": "source type",
+					"does": "source 1 (audio) → (notes)"
+				}
+			]
+		},
+		{
+			"id": "instrument.m4.element",
+			"name": "element LFO (M4)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "shift + M4"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": -2
+				},
+				{
+					"keys": "click E1"
+				}
+			],
+			"screen": "element lfo: source G, speed free 40, amount 0, destination syn",
+			"units": [
+				"instrument.lfo-element",
+				"instrument.lfo"
+			],
+			"captured": "59 §2.4",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "source",
+					"param": "lfo.sensor",
+					"value": "gyroscope",
+					"range": {
+						"first": "gyroscope",
+						"last": "sum",
+						"detents": 3,
+						"values": [
+							"gyroscope",
+							"microphone",
+							"amp envelope",
+							"sum"
+						],
+						"shows": [
+							{
+								"from": "gyroscope",
+								"to": "gyroscope",
+								"shows": "G"
+							},
+							{
+								"from": "microphone",
+								"to": "microphone",
+								"shows": "M"
+							},
+							{
+								"from": "amp envelope",
+								"to": "amp envelope",
+								"shows": "E"
+							},
+							{
+								"from": "sum",
+								"to": "sum",
+								"shows": "S"
+							}
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "sum mixes all three"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "lfo.amount",
+					"value": "0",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "lfo.destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "amp",
+						"detents": 3,
+						"values": [
+							"syn",
+							"env",
+							"filter",
+							"amp"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "module page to modulate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "lfo.parameter",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "4",
+						"detents": 3,
+						"step": 1
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "encoder on that page; clicking also selects"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter 1 → 2"
+				}
+			]
+		},
+		{
+			"id": "instrument.m4.random",
+			"name": "random LFO (M4)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "shift + M4"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": -1
+				},
+				{
+					"keys": "click E1"
+				}
+			],
+			"screen": "random lfo: speed free 40, amount 0, destination syn, parameter shape, envelope -2",
+			"units": [
+				"instrument.lfo-random",
+				"instrument.lfo"
+			],
+			"captured": "59 §2.4",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "lfo.speed",
+					"value": "40",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "synced when turned anti-clockwise, free past the dial icon"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "lfo.amount",
+					"value": "0",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "lfo.destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "filter free",
+						"detents": 5,
+						"values": [
+							"syn",
+							"syn free",
+							"env",
+							"env free",
+							"filter",
+							"filter free"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "module page, normal or free"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "lfo.parameter",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "4",
+						"detents": 3,
+						"step": 1,
+						"shows": [
+							{
+								"from": "1",
+								"to": "1",
+								"shows": "shape"
+							},
+							{
+								"from": "2",
+								"to": "2",
+								"shows": "ratio"
+							},
+							{
+								"from": "3",
+								"to": "3",
+								"shows": "detune"
+							},
+							{
+								"from": "4",
+								"to": "4",
+								"shows": "stereo"
+							}
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "envelope",
+					"param": "lfo.envelope",
+					"value": "-2",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"about": "fades the modulation in or out"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter 1 → 2"
+				}
+			]
+		},
+		{
+			"id": "instrument.m4.tremolo",
+			"name": "tremolo LFO (M4)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "tremolo lfo: speed free 40, amount 0 (pitch), volume -3, envelope -2, shape sine",
+			"note": "off in a new project: M4 on this page switches it on and off",
+			"units": [
+				"instrument.lfo-tremolo",
+				"instrument.lfo"
+			],
+			"captured": "59 §2.4",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "lfo.speed",
+					"value": "40",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "synced when turned anti-clockwise, free past the dial icon"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "lfo.amount",
+					"value": "0",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "vibrato depth (pitch)"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "volume",
+					"param": "lfo.volume",
+					"value": "-3",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "tremolo depth (level)"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "envelope",
+					"param": "lfo.envelope",
+					"value": "-2",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "fades the effect in or out"
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "shape",
+					"param": "lfo.shape",
+					"value": "sine",
+					"range": {
+						"first": "sine",
+						"last": "narrow square",
+						"detents": 3,
+						"values": [
+							"sine",
+							"saw",
+							"square",
+							"narrow square"
+						]
+					},
+					"about": "waveform of the LFO (the guide's figure; stepped like the click)"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"label": "shape",
+					"does": "shape sine → saw",
+					"about": "steps sine, saw, square, narrow square, then round again"
+				}
+			]
+		},
+		{
+			"id": "instrument.m4.value",
+			"name": "value LFO (M4)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "shift + M4"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 1
+				},
+				{
+					"keys": "click E1"
+				}
+			],
+			"screen": "value lfo: speed free 40, amount 0, destination syn, parameter shape",
+			"units": [
+				"instrument.lfo-value",
+				"instrument.lfo"
+			],
+			"captured": "59 §2.4",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "lfo.speed",
+					"value": "40",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "synced when turned anti-clockwise, free past the dial icon"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "lfo.amount",
+					"value": "0",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "lfo.destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "filter free",
+						"detents": 5,
+						"values": [
+							"syn",
+							"syn free",
+							"env",
+							"env free",
+							"filter",
+							"filter free"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "module page, normal or free"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "lfo.parameter",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "4",
+						"detents": 3,
+						"step": 1,
+						"shows": [
+							{
+								"from": "1",
+								"to": "1",
+								"shows": "shape"
+							},
+							{
+								"from": "2",
+								"to": "2",
+								"shows": "ratio"
+							},
+							{
+								"from": "3",
+								"to": "3",
+								"shows": "detune"
+							},
+							{
+								"from": "4",
+								"to": "4",
+								"shows": "stereo"
+							}
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"label": "shape",
+					"does": "shape sine → square",
+					"about": "steps sine, square, saw, reverse saw, then round again"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter 1 → 2"
+				}
+			]
+		},
+		{
+			"id": "instrument.m2.midi",
+			"name": "midi engine CC slots 1–4 (M2)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 4
+				},
+				{
+					"keys": "click E2"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "midi cc set I: off, off, off, off",
+			"shiftScreen": "midi cc set I cc numbers: off, off, off, off",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.engine-midi"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "cc slot 1",
+					"param": "cc slot 1",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E1 first"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "cc slot 2",
+					"param": "cc slot 2",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E2 first"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "cc slot 3",
+					"param": "cc slot 3",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E3 first"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "cc slot 4",
+					"param": "cc slot 4",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E4 first"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "cc slot 1 number",
+					"param": "cc slot 1 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "cc slot 2 number",
+					"param": "cc slot 2 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "cc slot 3 number",
+					"param": "cc slot 3 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "cc slot 4 number",
+					"param": "cc slot 4 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				}
+			]
+		},
+		{
+			"id": "instrument.m3.midi",
+			"name": "midi engine CC slots 5–8 (M3)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 4
+				},
+				{
+					"keys": "click E2"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "midi cc set II: off, off, off, off",
+			"shiftScreen": "midi cc set II cc numbers: off, off, off, off",
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.engine-midi"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "cc slot 5",
+					"param": "cc slot 5",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E1 first"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "cc slot 6",
+					"param": "cc slot 6",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E2 first"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "cc slot 7",
+					"param": "cc slot 7",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E3 first"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "cc slot 8",
+					"param": "cc slot 8",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E4 first"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "cc slot 5 number",
+					"param": "cc slot 5 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "cc slot 6 number",
+					"param": "cc slot 6 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "cc slot 7 number",
+					"param": "cc slot 7 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "cc slot 8 number",
+					"param": "cc slot 8 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					}
+				}
+			]
+		},
+		{
+			"id": "instrument.presets",
+			"name": "preset browser (shift + M1; opens by category)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				}
+			],
+			"screen": "presets for track 3, by category: bass, shoulder",
+			"keys": [
+				{
+					"keys": "shift + M1",
+					"opens": "new folder: \\"folder 1\\", character 8 is \\"1\\""
+				}
+			],
+			"note": "a click of E1 swaps to the engine view (instrument.presets.engine); plan_steps loads a preset by name (\\"pluck/dingus\\"; a category alone answers with its presets) or an engine, in whichever view shows",
+			"units": [
+				"instrument.preset-browser",
+				"instrument.preset-management",
+				"instrument.engine"
+			],
+			"captured": "59 §2.6",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "category",
+					"value": "bass",
+					"range": {
+						"first": "bass",
+						"last": "strings",
+						"detents": 8,
+						"values": [
+							"bass",
+							"drum",
+							"drumline",
+							"keys",
+							"lead",
+							"organ",
+							"pad",
+							"pluck",
+							"strings"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "preset",
+					"param": "preset",
+					"value": "shoulder",
+					"range": {
+						"first": "alloy",
+						"last": "wobbler",
+						"detents": 27,
+						"examples": [
+							"big square",
+							"flyby",
+							"jacket",
+							"mineral",
+							"pressure",
+							"sonorous"
+						]
+					},
+					"about": "\`E3\` and \`E4\` scroll too"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "preset",
+					"param": "preset",
+					"value": "shoulder",
+					"range": {
+						"first": "alloy",
+						"last": "wobbler",
+						"detents": 27,
+						"examples": [
+							"big square",
+							"flyby",
+							"jacket",
+							"mineral",
+							"pressure",
+							"sonorous"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "preset",
+					"param": "preset",
+					"value": "shoulder",
+					"range": {
+						"first": "alloy",
+						"last": "wobbler",
+						"detents": 27,
+						"examples": [
+							"big square",
+							"flyby",
+							"jacket",
+							"mineral",
+							"pressure",
+							"sonorous"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"label": "view",
+					"does": "presets for track 3, by category → engine (view popup)"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"label": "load",
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22",
+					"about": "clicking \`E3\` or \`E4\` also loads"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22"
+				}
+			]
+		},
+		{
+			"id": "instrument.presets.engine",
+			"name": "preset browser by engine (shift + M1, click E1)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "click E1"
+				}
+			],
+			"screen": "presets for track 3, by engine (view popup): prism, shoulder",
+			"keys": [
+				{
+					"keys": "shift + M1",
+					"opens": "new folder: \\"folder 1\\", character 8 is \\"1\\""
+				}
+			],
+			"note": "on OS 1.1.33 the preset browser opens by engine: leave out the click E1 after shift + M1",
+			"units": [
+				"instrument.preset-browser",
+				"instrument.preset-management",
+				"instrument.engine"
+			],
+			"captured": "59 §2.6",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "engine",
+					"param": "engine",
+					"value": "prism",
+					"range": {
+						"first": "axis",
+						"last": "midi",
+						"detents": 12,
+						"values": [
+							"axis",
+							"dissolve",
+							"drum",
+							"drumline",
+							"epiano",
+							"hardsync",
+							"multisampler",
+							"organ",
+							"prism",
+							"sampler",
+							"simple",
+							"wavetable",
+							"midi"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "preset",
+					"param": "preset",
+					"value": "shoulder",
+					"range": {
+						"first": "alloy",
+						"last": "wakeup",
+						"detents": 20,
+						"examples": [
+							"flyby",
+							"man stage",
+							"murmel",
+							"open cell",
+							"slush",
+							"tonk 5"
+						]
+					},
+					"about": "\`E3\` and \`E4\` scroll too"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "preset",
+					"param": "preset",
+					"value": "shoulder",
+					"range": {
+						"first": "alloy",
+						"last": "wakeup",
+						"detents": 20,
+						"examples": [
+							"flyby",
+							"man stage",
+							"murmel",
+							"open cell",
+							"slush",
+							"tonk 5"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "preset",
+					"param": "preset",
+					"value": "shoulder",
+					"range": {
+						"first": "alloy",
+						"last": "wakeup",
+						"detents": 20,
+						"examples": [
+							"flyby",
+							"man stage",
+							"murmel",
+							"open cell",
+							"slush",
+							"tonk 5"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"label": "view",
+					"does": "presets for track 3, by engine (view popup) → category (view popup)"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"label": "load",
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22",
+					"about": "clicking \`E3\` or \`E4\` also loads"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22"
+				}
+			]
+		},
+		{
+			"id": "instrument.filter-types",
+			"name": "filter types (shift + M3)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "shift + M3"
+				}
+			],
+			"screen": "svf",
+			"note": "dynamic (new in OS 1.2: instrument.m3.dynamic) comes first, above ladder; OS 1.1.33 lists ladder, svf, z hipass, z lowpass. E1 moves the box, a click of E1 picks the type (plan_steps: filter type)",
+			"units": [
+				"instrument.filter"
+			],
+			"captured": "59 §2.3",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "type",
+					"param": "filter.type",
+					"value": "svf",
+					"range": {
+						"first": "dynamic",
+						"last": "z lowpass",
+						"detents": 4,
+						"values": [
+							"dynamic",
+							"ladder",
+							"svf",
+							"z hipass",
+							"z lowpass"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "type",
+					"param": "filter.type",
+					"value": "svf",
+					"range": {
+						"first": "dynamic",
+						"last": "z lowpass",
+						"detents": 4,
+						"values": [
+							"dynamic",
+							"ladder",
+							"svf",
+							"z hipass",
+							"z lowpass"
+						]
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "type",
+					"param": "filter.type",
+					"value": "svf",
+					"range": {
+						"first": "dynamic",
+						"last": "z lowpass",
+						"detents": 4,
+						"values": [
+							"dynamic",
+							"ladder",
+							"svf",
+							"z hipass",
+							"z lowpass"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "type",
+					"param": "filter.type",
+					"value": "svf",
+					"range": {
+						"first": "dynamic",
+						"last": "z lowpass",
+						"detents": 4,
+						"values": [
+							"dynamic",
+							"ladder",
+							"svf",
+							"z hipass",
+							"z lowpass"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "opens prism: shape 15, ratio 2:1, detune 05, stereo 22"
+				}
+			]
+		},
+		{
+			"id": "instrument.lfo-types",
+			"name": "LFO types (shift + M4)",
+			"area": "instrument",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "shift + M4"
+				}
+			],
+			"screen": "tremolo",
+			"units": [
+				"instrument.lfo"
+			],
+			"captured": "59 §2.3",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "type",
+					"param": "lfo.type",
+					"value": "tremolo",
+					"range": {
+						"first": "duck",
+						"last": "value",
+						"detents": 4,
+						"values": [
+							"duck",
+							"element",
+							"random",
+							"tremolo",
+							"value"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "type",
+					"param": "lfo.type",
+					"value": "tremolo",
+					"range": {
+						"first": "duck",
+						"last": "value",
+						"detents": 4,
+						"values": [
+							"duck",
+							"element",
+							"random",
+							"tremolo",
+							"value"
+						]
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "type",
+					"param": "lfo.type",
+					"value": "tremolo",
+					"range": {
+						"first": "duck",
+						"last": "value",
+						"detents": 4,
+						"values": [
+							"duck",
+							"element",
+							"random",
+							"tremolo",
+							"value"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "type",
+					"param": "lfo.type",
+					"value": "tremolo",
+					"range": {
+						"first": "duck",
+						"last": "value",
+						"detents": 4,
+						"values": [
+							"duck",
+							"element",
+							"random",
+							"tremolo",
+							"value"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "opens tremolo lfo: speed free 40, amount 0 (pitch), volume -3, envelope -2, shape sine"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.brain.m1",
+			"name": "brain key and scale (M1)",
+			"area": "auxiliary",
+			"track": 9,
+			"path": [
+				{
+					"keys": "auxiliary"
+				}
+			],
+			"screen": "brain: c major, auto, root c, scale major, no linked track",
+			"units": [
+				"auxiliary.brain"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "mode",
+					"param": "mode",
+					"value": "auto",
+					"range": {
+						"first": "manual",
+						"last": "auto",
+						"detents": 1,
+						"values": [
+							"manual",
+							"auto"
+						]
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "root",
+					"param": "root",
+					"value": "c",
+					"range": {
+						"first": "c",
+						"last": "b",
+						"detents": 11,
+						"values": [
+							"c",
+							"c#",
+							"d",
+							"d#",
+							"e",
+							"f",
+							"f#",
+							"g",
+							"g#",
+							"a",
+							"a#",
+							"b"
+						]
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "the guide calls it key"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "scale",
+					"param": "scale",
+					"value": "major",
+					"range": {
+						"first": "major",
+						"last": "locrian",
+						"detents": 6,
+						"values": [
+							"major",
+							"dorian",
+							"phrygian",
+							"lydian",
+							"mixo",
+							"minor",
+							"locrian"
+						]
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "link",
+					"param": "link",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "08",
+						"detents": 8,
+						"values": [
+							"off",
+							"01",
+							"02",
+							"03",
+							"04",
+							"05",
+							"06",
+							"07",
+							"08"
+						]
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "links an instrument track, to riff over the song as it transposes"
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "mode auto → manual"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.brain.m2",
+			"name": "brain routing (M2)",
+			"area": "auxiliary",
+			"track": 9,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "brain routing: tracks 1–4 on the encoders, routed 3 4 5 6 7 8",
+			"units": [
+				"auxiliary.brain"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "track 1",
+					"param": "track 1",
+					"value": "out",
+					"range": {
+						"first": "out",
+						"last": "in",
+						"detents": 1,
+						"values": [
+							"out",
+							"in"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "track 2",
+					"param": "track 2",
+					"value": "out",
+					"range": {
+						"first": "out",
+						"last": "in",
+						"detents": 1,
+						"values": [
+							"out",
+							"in"
+						]
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "track 3",
+					"param": "track 3",
+					"value": "in",
+					"range": {
+						"first": "out",
+						"last": "in",
+						"detents": 1,
+						"values": [
+							"out",
+							"in"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "track 4",
+					"param": "track 4",
+					"value": "in",
+					"range": {
+						"first": "out",
+						"last": "in",
+						"detents": 1,
+						"values": [
+							"out",
+							"in"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.punch-in.m1",
+			"name": "punch-in FX effects (M1)",
+			"area": "auxiliary",
+			"track": 10,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T2"
+				}
+			],
+			"screen": "punch-in fx: hold keys for effects",
+			"note": "the keyboard plays the effects (the lower octave on the percussion tracks, the upper on the melodic ones); shift + a key does it from any instrument track",
+			"units": [
+				"auxiliary.punch-in-fx"
+			],
+			"captured": "59 §2.13",
+			"controls": []
+		},
+		{
+			"id": "auxiliary.external-midi.m1",
+			"name": "external MIDI channel and program (M1)",
+			"area": "auxiliary",
+			"track": 11,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T3"
+				}
+			],
+			"screen": "external midi: channel 01, bank none, program none",
+			"units": [
+				"auxiliary.external-midi"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "channel",
+					"param": "channel",
+					"value": "01",
+					"range": {
+						"first": "01",
+						"last": "16",
+						"detents": 15,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "bank",
+					"param": "bank",
+					"value": "none",
+					"range": {
+						"first": "none",
+						"last": "128",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "program",
+					"param": "program",
+					"value": "none",
+					"range": {
+						"first": "none",
+						"last": "128",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-midi.m2",
+			"name": "external MIDI CC slots 1–4 (M2)",
+			"area": "auxiliary",
+			"track": 11,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "external midi set I: off, off, off, off",
+			"units": [
+				"auxiliary.external-midi"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "cc slot 1",
+					"param": "cc slot 1",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E1 first",
+					"midi": {
+						"cc": 20,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "cc slot 2",
+					"param": "cc slot 2",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E2 first",
+					"midi": {
+						"cc": 21,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "cc slot 3",
+					"param": "cc slot 3",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E3 first",
+					"midi": {
+						"cc": 22,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "cc slot 4",
+					"param": "cc slot 4",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E4 first",
+					"midi": {
+						"cc": 23,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "cc slot 1 number",
+					"param": "cc slot 1 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 28,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "cc slot 2 number",
+					"param": "cc slot 2 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 29,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "cc slot 3 number",
+					"param": "cc slot 3 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 30,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "cc slot 4 number",
+					"param": "cc slot 4 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 31,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-midi.m3",
+			"name": "external MIDI CC slots 5–8 (M3)",
+			"area": "auxiliary",
+			"track": 11,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "external midi set II: off, off, off, off",
+			"units": [
+				"auxiliary.external-midi"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "cc slot 5",
+					"param": "cc slot 5",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E1 first",
+					"midi": {
+						"cc": 32,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "cc slot 6",
+					"param": "cc slot 6",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E2 first",
+					"midi": {
+						"cc": 33,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "cc slot 7",
+					"param": "cc slot 7",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E3 first",
+					"midi": {
+						"cc": 34,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "cc slot 8",
+					"param": "cc slot 8",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					},
+					"needs": "shift + turn E4 first",
+					"midi": {
+						"cc": 35,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "cc slot 5 number",
+					"param": "cc slot 5 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 36,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "cc slot 6 number",
+					"param": "cc slot 6 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 37,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "cc slot 7 number",
+					"param": "cc slot 7 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 38,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "cc slot 8 number",
+					"param": "cc slot 8 number",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 128,
+						"step": 1
+					},
+					"midi": {
+						"cc": 39,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-midi.m4",
+			"name": "external MIDI LFO (M4)",
+			"area": "auxiliary",
+			"track": 11,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "lfo: amount 0, destination off, parameter no cc set",
+			"note": "off in a new project: M4 on this page switches it on and off",
+			"units": [
+				"auxiliary.external-midi",
+				"auxiliary.routing-filter-lfo"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "speed",
+					"value": "1",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "amount",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 198,
+						"examples": [
+							"-72",
+							"-42",
+							"-14",
+							"14",
+							"42",
+							"72"
+						]
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "destination",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "cc2",
+						"detents": 2,
+						"values": [
+							"off",
+							"cc1",
+							"cc2"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "the page to modulate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "parameter",
+					"value": "E1",
+					"range": {
+						"first": "E1",
+						"last": "E4",
+						"detents": 3,
+						"values": [
+							"E1",
+							"E2",
+							"E3",
+							"E4"
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "the encoder on that page"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter E1 → E2"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-cv.m1",
+			"name": "external CV voltmeter (M1)",
+			"area": "auxiliary",
+			"track": 12,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T4"
+				}
+			],
+			"screen": "external cv: +0.00 volts",
+			"note": "no encoder does anything here; notes move the needle (pitch CV), and CC 12–15 did nothing on the owner’s unit",
+			"units": [
+				"auxiliary.external-cv"
+			],
+			"captured": "59 §2.13",
+			"controls": []
+		},
+		{
+			"id": "auxiliary.external-audio.m1",
+			"name": "external audio input (M1)",
+			"area": "auxiliary",
+			"track": 13,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T5"
+				}
+			],
+			"screen": "external audio: mic off, drive 00, level 75, mix 99",
+			"units": [
+				"auxiliary.external-audio"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "input",
+					"param": "input",
+					"value": "mic",
+					"range": {
+						"first": "mic",
+						"last": "main output",
+						"detents": 4,
+						"values": [
+							"mic",
+							"headset",
+							"audio input",
+							"usb audio",
+							"main output"
+						]
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					},
+					"about": "this track's own list, not the sample page's sources"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "drive",
+					"param": "drive",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "20",
+						"detents": 20,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "preamp gain, analog inputs only"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "level",
+					"param": "level",
+					"value": "75",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers"
+					},
+					"about": "the input's volume in the main mix"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "mix",
+					"param": "mix",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how much of the routed tracks returns to the main output"
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"label": "input on / off",
+					"does": "mic off → on"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-audio.m2",
+			"name": "external audio routing (M2)",
+			"area": "auxiliary",
+			"track": 13,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T5"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "aux out routing: tracks 1–4 on the encoders, routed 5",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "track 1",
+					"param": "track 1",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "track 2",
+					"param": "track 2",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "track 3",
+					"param": "track 3",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "track 4",
+					"param": "track 4",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-audio.m3",
+			"name": "external audio filter (M3)",
+			"area": "auxiliary",
+			"track": 13,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T5"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "filter: high-pass 0, low-pass 99",
+			"shiftScreen": "sends: tape 00, fx I 00, fx II 00",
+			"note": "off in a new project: M3 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "high-pass",
+					"param": "high-pass",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 32,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "low-pass",
+					"param": "low-pass",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 35,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "tape",
+					"param": "tape",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 37,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					},
+					"about": "external audio only"
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "fx i",
+					"param": "fx i",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 38,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					},
+					"about": "external audio and tape"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "fx ii",
+					"param": "fx ii",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 39,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					},
+					"about": "external audio, tape, and FX I (into FX II); FX II itself has no documented send"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.external-audio.m4",
+			"name": "external audio LFO (M4)",
+			"area": "auxiliary",
+			"track": 13,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T5"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "lfo: amount 0, destination syn, parameter param1",
+			"note": "off in a new project: M4 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "speed",
+					"value": "1",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "amount",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 198,
+						"examples": [
+							"-72",
+							"-42",
+							"-14",
+							"14",
+							"42",
+							"72"
+						]
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "amp",
+						"detents": 2,
+						"values": [
+							"syn",
+							"filter",
+							"amp"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "derived"
+					},
+					"about": "the page to modulate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "parameter",
+					"value": "param1",
+					"range": {
+						"first": "param1",
+						"last": "param4",
+						"detents": 3,
+						"values": [
+							"param1",
+							"param2",
+							"param3",
+							"param4"
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "derived"
+					},
+					"about": "the encoder on that page"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter param1 → param2"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.tape.m1",
+			"name": "tape loop (M1)",
+			"area": "auxiliary",
+			"track": 14,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T6"
+				}
+			],
+			"screen": "tape: pitch x1, speed 100, length 1, mix 00",
+			"units": [
+				"auxiliary.tape"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "pitch",
+					"param": "pitch",
+					"value": "x1",
+					"range": {
+						"first": "x1",
+						"last": "x10",
+						"detents": 9,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "big jumps, for drastic effects"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "speed",
+					"param": "speed",
+					"value": "100",
+					"range": {
+						"first": "50",
+						"last": "200",
+						"detents": 150,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "finer and gentler than pitch"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "length",
+					"param": "length",
+					"value": "1",
+					"range": {
+						"first": "1",
+						"last": "16",
+						"detents": 15,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "conflicting"
+					},
+					"about": "length of the tape loop"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "mix",
+					"param": "mix",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "tape against the original audio"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.tape.m2",
+			"name": "tape routing (M2)",
+			"area": "auxiliary",
+			"track": 14,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T6"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "tape routing: tracks 1–4 on the encoders, routed 1 2 3 4 5 6 7 8",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "track 1",
+					"param": "track 1",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "track 2",
+					"param": "track 2",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "track 3",
+					"param": "track 3",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "track 4",
+					"param": "track 4",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.tape.m3",
+			"name": "tape filter (M3)",
+			"area": "auxiliary",
+			"track": 14,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T6"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "filter: high-pass 0, low-pass 99",
+			"shiftScreen": "sends: fx I 00, fx II 00",
+			"note": "off in a new project: M3 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "high-pass",
+					"param": "high-pass",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 32,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "low-pass",
+					"param": "low-pass",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 35,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "fx i",
+					"param": "fx i",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 38,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					},
+					"about": "external audio and tape"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "fx ii",
+					"param": "fx ii",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 39,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					},
+					"about": "external audio, tape, and FX I (into FX II); FX II itself has no documented send"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.tape.m4",
+			"name": "tape LFO (M4)",
+			"area": "auxiliary",
+			"track": 14,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T6"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "lfo: amount 0, destination syn, parameter param1",
+			"note": "off in a new project: M4 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "speed",
+					"value": "1",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "amount",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 198,
+						"examples": [
+							"-72",
+							"-42",
+							"-14",
+							"14",
+							"42",
+							"72"
+						]
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "amp",
+						"detents": 2,
+						"values": [
+							"syn",
+							"filter",
+							"amp"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					},
+					"about": "the page to modulate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "parameter",
+					"value": "param1",
+					"range": {
+						"first": "param1",
+						"last": "param4",
+						"detents": 3,
+						"values": [
+							"param1",
+							"param2",
+							"param3",
+							"param4"
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					},
+					"about": "the encoder on that page"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter param1 → param2"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m1.chorus",
+			"name": "FX I chorus (M1)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "shift + T7"
+				},
+				{
+					"keys": "turn E4",
+					"clicks": -1
+				},
+				{
+					"keys": "click E4"
+				}
+			],
+			"screen": "FX I chorus: rate 59, depth 50, feedback 50, stereo 50",
+			"units": [
+				"fx.chorus",
+				"fx.overview"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "rate",
+					"param": "rate",
+					"value": "59",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "speed of the pitch modulation"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "depth",
+					"param": "depth",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how far the pitch is modulated"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "feedback",
+					"param": "feedback",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how much of the output returns into the chorus"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "stereo",
+					"param": "stereo",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "width of the chorus image"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m1.delay",
+			"name": "FX I delay (M1)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				}
+			],
+			"screen": "FX I delay: size 1/8 dotted, fine 50, feedback 50, dry 99",
+			"units": [
+				"fx.delay",
+				"fx.overview"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "size",
+					"param": "size",
+					"value": "1/8 dotted",
+					"range": {
+						"first": "1/32",
+						"last": "1/2",
+						"detents": 7,
+						"values": [
+							"1/32",
+							"1/32 dotted",
+							"1/16",
+							"1/16 dotted",
+							"1/8",
+							"1/8 dotted",
+							"1/4",
+							"1/2"
+						]
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "coarse spacing between repeats"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "fine",
+					"param": "fine",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "fine-tunes the spacing; the guide calls it amount"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "feedback",
+					"param": "feedback",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how many repeats come back; the guide calls it fine"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "dry",
+					"param": "dry",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "level of the untreated signal"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m1.distortion",
+			"name": "FX I distortion (M1)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "shift + T7"
+				},
+				{
+					"keys": "turn E4",
+					"clicks": 1
+				},
+				{
+					"keys": "click E4"
+				}
+			],
+			"screen": "FX I dist: drive 06, clip 99, lo cut 50, hi cut 99",
+			"units": [
+				"fx.distortion",
+				"fx.overview"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "drive",
+					"param": "drive",
+					"value": "06",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "level going into the distortion"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "clip",
+					"param": "clip",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how hard the signal is clipped; the guide calls it amount"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "lo cut",
+					"param": "lo cut",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how much bass reaches the distortion"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "hi cut",
+					"param": "hi cut",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how much treble reaches the distortion"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m1.lofi",
+			"name": "FX I lofi (M1)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "shift + T7"
+				},
+				{
+					"keys": "turn E4",
+					"clicks": 2
+				},
+				{
+					"keys": "click E4"
+				}
+			],
+			"screen": "FX I lofi: rate 50, bits 73, quality 61, drift 99",
+			"units": [
+				"fx.lofi",
+				"fx.overview"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "rate",
+					"param": "rate",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "sample rate of the effect"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "bits",
+					"param": "bits",
+					"value": "73",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "bit depth (the guide says bitrate)"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "quality",
+					"param": "quality",
+					"value": "61",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "drift",
+					"param": "drift",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "stereo spread of the output"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m1.phaser",
+			"name": "FX I phaser (M1)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "shift + T7"
+				},
+				{
+					"keys": "turn E4",
+					"clicks": 3
+				},
+				{
+					"keys": "click E4"
+				}
+			],
+			"screen": "FX I phaser: frequency 30, depth 61, rate 30, feedback 50",
+			"units": [
+				"fx.phaser",
+				"fx.overview"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "frequency",
+					"param": "frequency",
+					"value": "30",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "centre frequency the sweep moves around"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "depth",
+					"param": "depth",
+					"value": "61",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "how far the sweep travels"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "rate",
+					"param": "rate",
+					"value": "30",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "sweep speed"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "feedback",
+					"param": "feedback",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "resonance of the notches"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m1.reverb",
+			"name": "FX I reverb (M1)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "shift + T7"
+				},
+				{
+					"keys": "turn E4",
+					"clicks": 4
+				},
+				{
+					"keys": "click E4"
+				}
+			],
+			"screen": "FX I reverb: size 69, mod 00, tone 29, dry 99",
+			"units": [
+				"fx.reverb",
+				"fx.overview"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "size",
+					"param": "size",
+					"value": "69",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "room size, small room to cathedral"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "mod",
+					"param": "mod",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "chorus-like swell"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "tone",
+					"param": "tone",
+					"value": "29",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "darkens or brightens the reverb; the guide calls it rate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "dry",
+					"param": "dry",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "dry signal against the reverb; the guide calls it feedback"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m2",
+			"name": "FX I routing (M2)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "FX I routing: tracks 1–4 on the encoders, routed 5 7",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "track 1",
+					"param": "track 1",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "track 2",
+					"param": "track 2",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "track 3",
+					"param": "track 3",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "track 4",
+					"param": "track 4",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m3",
+			"name": "FX I filter (M3)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "filter: high-pass 0, low-pass 99",
+			"shiftScreen": "sends: fx II 00",
+			"note": "off in a new project: M3 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "high-pass",
+					"param": "high-pass",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 32,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "low-pass",
+					"param": "low-pass",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 35,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "fx ii",
+					"param": "fx ii",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 39,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					},
+					"about": "external audio, tape, and FX I (into FX II); FX II itself has no documented send"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-i.m4",
+			"name": "FX I LFO (M4)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T7"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "lfo: amount 0, destination syn, parameter param1",
+			"note": "off in a new project: M4 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "speed",
+					"value": "1",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "amount",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 198,
+						"examples": [
+							"-72",
+							"-42",
+							"-14",
+							"14",
+							"42",
+							"72"
+						]
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "amp",
+						"detents": 2,
+						"values": [
+							"syn",
+							"filter",
+							"amp"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					},
+					"about": "the page to modulate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "parameter",
+					"value": "param1",
+					"range": {
+						"first": "param1",
+						"last": "param4",
+						"detents": 3,
+						"values": [
+							"param1",
+							"param2",
+							"param3",
+							"param4"
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					},
+					"about": "the encoder on that page"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter param1 → param2"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-ii.m1",
+			"name": "FX II reverb (M1)",
+			"area": "auxiliary",
+			"track": 16,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T8"
+				}
+			],
+			"screen": "FX II reverb: size 69, mod 00, tone 29, dry 99",
+			"units": [
+				"fx.reverb",
+				"fx.overview"
+			],
+			"captured": "59 §2.13 (FX I’s layout)",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "size",
+					"param": "size",
+					"value": "69",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 12,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "room size, small room to cathedral"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "mod",
+					"param": "mod",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 13,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "chorus-like swell"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "tone",
+					"param": "tone",
+					"value": "29",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 14,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "darkens or brightens the reverb; the guide calls it rate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "dry",
+					"param": "dry",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 15,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "dry signal against the reverb; the guide calls it feedback"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-ii.m2",
+			"name": "FX II routing (M2)",
+			"area": "auxiliary",
+			"track": 16,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T8"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "FX II routing: tracks 1–4 on the encoders, routed 4 5 6 7",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "track 1",
+					"param": "track 1",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "track 2",
+					"param": "track 2",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "track 3",
+					"param": "track 3",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "track 4",
+					"param": "track 4",
+					"value": "23",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "tracks 1–4 on the encoders → 5–8 on the encoders"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-ii.m3",
+			"name": "FX II filter (M3)",
+			"area": "auxiliary",
+			"track": 16,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T8"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "filter: high-pass 0, low-pass 99",
+			"note": "off in a new project: M3 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "high-pass",
+					"param": "high-pass",
+					"value": "0",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 32,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "low-pass",
+					"param": "low-pass",
+					"value": "99",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 35,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community"
+					}
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-ii.m4",
+			"name": "FX II LFO (M4)",
+			"area": "auxiliary",
+			"track": 16,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "T8"
+				},
+				{
+					"keys": "M4"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "lfo: amount 0, destination syn, parameter param1",
+			"note": "off in a new project: M4 on this page switches it on and off",
+			"units": [
+				"auxiliary.routing-filter-lfo"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "speed",
+					"value": "1",
+					"range": {
+						"first": "8",
+						"last": "99",
+						"detents": 107,
+						"examples": [
+							"7",
+							"6",
+							"5",
+							"4",
+							"3",
+							"2",
+							"1",
+							"00",
+							"07",
+							"23",
+							"38",
+							"53",
+							"68",
+							"84"
+						]
+					},
+					"midi": {
+						"cc": 40,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "amount",
+					"param": "amount",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 198,
+						"examples": [
+							"-72",
+							"-42",
+							"-14",
+							"14",
+							"42",
+							"72"
+						]
+					},
+					"midi": {
+						"cc": 41,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					}
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "destination",
+					"param": "destination",
+					"value": "syn",
+					"range": {
+						"first": "syn",
+						"last": "amp",
+						"detents": 2,
+						"values": [
+							"syn",
+							"filter",
+							"amp"
+						]
+					},
+					"midi": {
+						"cc": 42,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					},
+					"about": "the page to modulate"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "parameter",
+					"param": "parameter",
+					"value": "param1",
+					"range": {
+						"first": "param1",
+						"last": "param4",
+						"detents": 3,
+						"values": [
+							"param1",
+							"param2",
+							"param3",
+							"param4"
+						]
+					},
+					"midi": {
+						"cc": 43,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "derived"
+					},
+					"about": "the encoder on that page"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "parameter param1 → param2"
+				}
+			]
+		},
+		{
+			"id": "auxiliary.fx-types",
+			"name": "effect list (shift + T7 or T8)",
+			"area": "auxiliary",
+			"track": 15,
+			"path": [
+				{
+					"keys": "auxiliary"
+				},
+				{
+					"keys": "shift + T7"
+				}
+			],
+			"screen": "delay",
+			"units": [
+				"fx.overview"
+			],
+			"captured": "59 §2.13",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "effect",
+					"param": "effect",
+					"value": "delay",
+					"range": {
+						"first": "chorus",
+						"last": "reverb",
+						"detents": 5,
+						"values": [
+							"chorus",
+							"delay",
+							"dist",
+							"lofi",
+							"phaser",
+							"reverb"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "effect",
+					"param": "effect",
+					"value": "delay",
+					"range": {
+						"first": "chorus",
+						"last": "reverb",
+						"detents": 5,
+						"values": [
+							"chorus",
+							"delay",
+							"dist",
+							"lofi",
+							"phaser",
+							"reverb"
+						]
+					}
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "opens FX I delay: size 1/8 dotted, fine 50, feedback 50, dry 99"
+				}
+			]
+		},
+		{
+			"id": "mix.m1",
+			"name": "mixer: levels, pans and sends (M1)",
+			"area": "mix",
+			"path": [
+				{
+					"keys": "mix"
+				}
+			],
+			"screen": "mix, instrument track 1: level 74, pan 0",
+			"note": "the values are the selected track’s (T1–T8 picks the strip); E1 and E2 show its FX sends in a popup while they turn",
+			"units": [
+				"mix.levels-pans-sends",
+				"mix.mute-solo"
+			],
+			"captured": "59 §2.10",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "fx i",
+					"param": "fx i",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 38,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "community-verified"
+					},
+					"about": "share of the track sent to FX I"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "fx ii",
+					"param": "fx ii",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 39,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "community-verified"
+					},
+					"about": "share of the track sent to FX II"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "pan",
+					"param": "pan",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 100,
+						"step": 2,
+						"fine": 1
+					},
+					"midi": {
+						"cc": 10,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "stereo position"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "level",
+					"param": "level",
+					"value": "74",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 7,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "track volume in the mix"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"label": "centre pan",
+					"does": "resets pan to 0"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"label": "mute",
+					"does": "muted",
+					"midi": {
+						"cc": 9,
+						"channel": "track",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "mutes or unmutes the selected track"
+				}
+			]
+		},
+		{
+			"id": "mix.m1.auxiliary",
+			"name": "mixer: auxiliary tracks (M1, mix again)",
+			"area": "mix",
+			"path": [
+				{
+					"keys": "mix"
+				},
+				{
+					"keys": "mix"
+				}
+			],
+			"screen": "mix, auxiliary track 1: level 74, pan 0",
+			"note": "mix pressed again swaps the track keys to the auxiliary tracks; a track sends to FX I and II only where its own M3 shift layer has the send",
+			"units": [
+				"mix.levels-pans-sends"
+			],
+			"controls": [
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "pan",
+					"param": "pan",
+					"value": "0",
+					"range": {
+						"first": "-100",
+						"last": "100",
+						"detents": 100,
+						"step": 2,
+						"fine": 1
+					},
+					"midi": {
+						"cc": 10,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "stereo position"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "level",
+					"param": "level",
+					"value": "74",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 7,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "track volume in the mix"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"label": "centre pan",
+					"does": "resets pan to 0"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"label": "mute",
+					"does": "muted",
+					"midi": {
+						"cc": 9,
+						"channel": "track",
+						"reach": "untested",
+						"confidence": "verified"
+					},
+					"about": "mutes or unmutes the selected track"
+				}
+			]
+		},
+		{
+			"id": "mix.m2",
+			"name": "mixer: master EQ (M2)",
+			"area": "mix",
+			"path": [
+				{
+					"keys": "mix"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "master eq: low 00, mid 00, high 00, blend 50",
+			"units": [
+				"mix.eq"
+			],
+			"captured": "59 §2.10",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "low",
+					"param": "low",
+					"value": "00",
+					"range": {
+						"first": "–50",
+						"last": "+50",
+						"detents": 100,
+						"step": 1
+					},
+					"midi": {
+						"cc": 90,
+						"channel": 1,
+						"reach": "answers",
+						"confidence": "community-verified"
+					},
+					"about": "boost or cut the lows"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "mid",
+					"param": "mid",
+					"value": "00",
+					"range": {
+						"first": "–50",
+						"last": "+50",
+						"detents": 100,
+						"step": 1
+					},
+					"midi": {
+						"cc": 90,
+						"channel": 2,
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "boost or cut the mids"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "high",
+					"param": "high",
+					"value": "00",
+					"range": {
+						"first": "–50",
+						"last": "+50",
+						"detents": 100,
+						"step": 1
+					},
+					"midi": {
+						"cc": 90,
+						"channel": 3,
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "boost or cut the highs"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "blend",
+					"param": "blend",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"midi": {
+						"cc": 90,
+						"channel": 4,
+						"reach": "ignores",
+						"confidence": "conflicting"
+					},
+					"about": "flat at low values, full curve at high values"
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "resets low to 00"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "resets mid to 00"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "resets high to 00"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"label": "reset all",
+					"does": "resets low to 00, mid to 00, high to 00, blend to 50",
+					"about": "flattens the whole EQ"
+				}
+			]
+		},
+		{
+			"id": "mix.m3",
+			"name": "mixer: saturator (M3)",
+			"area": "mix",
+			"path": [
+				{
+					"keys": "mix"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "master saturator: gain 20, clip 20, tone 00, mix 00",
+			"units": [
+				"mix.saturator"
+			],
+			"captured": "59 §2.10",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "gain",
+					"param": "gain",
+					"value": "20",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "level driven into the saturator"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "clip",
+					"param": "clip",
+					"value": "20",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "trims loud peaks"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "tone",
+					"param": "tone",
+					"value": "00",
+					"range": {
+						"first": "–50",
+						"last": "+50",
+						"detents": 100,
+						"step": 1
+					},
+					"about": "filters out highs or lows"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "mix",
+					"param": "mix",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "amount of saturation in the master"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "resets mix to 00"
+				}
+			]
+		},
+		{
+			"id": "mix.m4",
+			"name": "mixer: master (M4)",
+			"area": "mix",
+			"path": [
+				{
+					"keys": "mix"
+				},
+				{
+					"keys": "M4"
+				}
+			],
+			"screen": "master: percussion 50, melodic 50, compressor 10, master 50",
+			"units": [
+				"mix.master"
+			],
+			"captured": "59 §2.10",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "percussion",
+					"param": "percussion",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "level of the percussion group"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "melodic",
+					"param": "melodic",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "level of the melodic group"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "compressor",
+					"param": "compressor",
+					"value": "10",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "amount of master-bus compression"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "master",
+					"param": "master",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "drive into the output limiter"
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "resets percussion to 50"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "resets melodic to 50"
+				}
+			]
+		},
+		{
+			"id": "tempo",
+			"name": "tempo",
+			"area": "tempo",
+			"path": [
+				{
+					"keys": "tempo"
+				}
+			],
+			"screen": "tempo 120 bpm, groove SH, swing 0, metronome on at level 65",
+			"shiftScreen": "tempo 120.0 bpm, groove SH, swing 0, metronome on at level 65",
+			"note": "tempo pressed again on this page taps the tempo",
+			"units": [
+				"tempo.tempo-screen",
+				"tempo.grooves"
+			],
+			"captured": "59 §2.11",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "tempo",
+					"param": "tempo.bpm",
+					"value": "120",
+					"range": {
+						"first": "40",
+						"last": "220",
+						"detents": 180,
+						"step": 1,
+						"fine": 0.1
+					},
+					"midi": {
+						"cc": 80,
+						"channel": "any",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "song tempo in BPM"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "groove",
+					"param": "tempo.groove",
+					"value": "shuffle",
+					"range": {
+						"first": "shuffle",
+						"last": "prophetic",
+						"detents": 10,
+						"values": [
+							"shuffle",
+							"half shuffle",
+							"danish",
+							"bombora",
+							"wobbly",
+							"gaussian",
+							"accents",
+							"island nod",
+							"disfunk",
+							"roll over",
+							"prophetic"
+						],
+						"shows": [
+							{
+								"from": "shuffle",
+								"to": "shuffle",
+								"shows": "SH"
+							},
+							{
+								"from": "half shuffle",
+								"to": "half shuffle",
+								"shows": "HS"
+							},
+							{
+								"from": "danish",
+								"to": "danish",
+								"shows": "DA"
+							},
+							{
+								"from": "bombora",
+								"to": "bombora",
+								"shows": "BO"
+							},
+							{
+								"from": "wobbly",
+								"to": "wobbly",
+								"shows": "WO"
+							},
+							{
+								"from": "gaussian",
+								"to": "gaussian",
+								"shows": "GA"
+							},
+							{
+								"from": "accents",
+								"to": "accents",
+								"shows": "AC"
+							},
+							{
+								"from": "island nod",
+								"to": "island nod",
+								"shows": "IN"
+							},
+							{
+								"from": "disfunk",
+								"to": "disfunk",
+								"shows": "DF"
+							},
+							{
+								"from": "roll over",
+								"to": "roll over",
+								"shows": "RO"
+							},
+							{
+								"from": "prophetic",
+								"to": "prophetic",
+								"shows": "PR"
+							}
+						]
+					},
+					"about": "the style of swing (see grooves)"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "swing",
+					"param": "tempo.swing",
+					"value": "0",
+					"range": {
+						"first": "-99",
+						"last": "99",
+						"detents": 198,
+						"step": 1
+					},
+					"midi": {
+						"cc": 81,
+						"channel": "any",
+						"reach": "answers",
+						"confidence": "verified"
+					},
+					"about": "right of centre adds swing, left of centre adds shuffle"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "metronome",
+					"param": "tempo.metronome",
+					"value": "65",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "tempo",
+					"param": "tempo.bpm",
+					"value": "120",
+					"range": {
+						"first": "40",
+						"last": "220",
+						"detents": 1800,
+						"step": 0.1
+					}
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"label": "metronome on/off",
+					"does": "metronome on at level 65 → off"
+				}
+			]
+		},
+		{
+			"id": "player.arpeggio",
+			"name": "arpeggio player",
+			"area": "player",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "player"
+				},
+				{
+					"keys": "player"
+				}
+			],
+			"screen": "arpeggio player on: speed 1/8, pattern up, range 1 oct, hold off",
+			"shiftScreen": "arpeggio player on: length 50, style off, glide 00, stereo 00",
+			"note": "off in a new project: player on this page switches it on and off",
+			"units": [
+				"players.arpeggio",
+				"players.overview"
+			],
+			"captured": "59 §2.7",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "speed",
+					"param": "speed",
+					"value": "1/8",
+					"range": {
+						"first": "1/4",
+						"last": "1/64",
+						"detents": 8,
+						"values": [
+							"1/4",
+							"1/4t",
+							"1/8",
+							"1/8t",
+							"1/16",
+							"1/16t",
+							"1/32",
+							"1/32t",
+							"1/64"
+						]
+					},
+					"about": "rate of the run"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "pattern",
+					"param": "pattern",
+					"value": "up",
+					"range": {
+						"first": "up",
+						"last": "play order",
+						"detents": 5,
+						"values": [
+							"up",
+							"down",
+							"up/down",
+							"up/repeat/down",
+							"random",
+							"play order"
+						]
+					},
+					"about": "random, play order, up, down, up/down or up/repeat/down"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "range",
+					"param": "range",
+					"value": "1 oct",
+					"range": {
+						"first": "1 oct",
+						"last": "4 oct",
+						"detents": 3,
+						"values": [
+							"1 oct",
+							"2 oct",
+							"3 oct",
+							"4 oct"
+						]
+					},
+					"about": "span of the run"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "hold",
+					"param": "hold",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "on",
+						"detents": 1,
+						"values": [
+							"off",
+							"on"
+						]
+					},
+					"about": "keeps the run going after the keys are released"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "length",
+					"param": "length",
+					"value": "50",
+					"range": {
+						"first": "01",
+						"last": "99",
+						"detents": 98,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "style",
+					"param": "style",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "double",
+						"detents": 5,
+						"values": [
+							"off",
+							"hill",
+							"saw",
+							"thumb",
+							"trio",
+							"double"
+						]
+					},
+					"about": "playback order of the notes"
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "glide",
+					"param": "glide",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "slide between notes"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "stereo",
+					"param": "stereo",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "pans successive notes apart"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "hold off → on"
+				}
+			]
+		},
+		{
+			"id": "player.hold",
+			"name": "hold player",
+			"area": "player",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + player → + turn E1",
+					"clicks": 1
+				},
+				{
+					"keys": "player"
+				}
+			],
+			"screen": "hold player on",
+			"note": "off in a new project: player on this page switches it on and off",
+			"units": [
+				"players.hold",
+				"players.overview"
+			],
+			"captured": "59 §2.7",
+			"controls": []
+		},
+		{
+			"id": "player.maestro",
+			"name": "maestro player",
+			"area": "player",
+			"track": 3,
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + player → + turn E1",
+					"clicks": 2
+				},
+				{
+					"keys": "player"
+				}
+			],
+			"screen": "maestro player on: roll 00, pattern up, hold off; no chord stored",
+			"note": "off in a new project: player on this page switches it on and off",
+			"units": [
+				"players.maestro",
+				"players.overview"
+			],
+			"captured": "59 §2.7",
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "roll",
+					"param": "roll",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "strums the notes, from block chord to slow spread"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "pattern",
+					"param": "pattern",
+					"value": "up",
+					"range": {
+						"first": "up",
+						"last": "random",
+						"detents": 3,
+						"values": [
+							"up",
+							"down",
+							"up/down",
+							"random"
+						]
+					},
+					"about": "strum order — up, down, up/down or random"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "hold",
+					"param": "hold",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "on",
+						"detents": 1,
+						"values": [
+							"off",
+							"on"
+						]
+					},
+					"about": "the chord rings on after the key is released"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "hold off → on"
+				}
+			]
+		},
+		{
+			"id": "project",
+			"name": "project",
+			"area": "project",
+			"path": [
+				{
+					"keys": "project"
+				}
+			],
+			"screen": "project unnamed",
+			"soft": [
+				"new",
+				"save",
+				"rename",
+				"config"
+			],
+			"keys": [
+				{
+					"keys": "M3",
+					"opens": "rename project: \\"unnamed\\", character 7 is \\"d\\""
+				},
+				{
+					"keys": "M4",
+					"opens": "project settings: general, glob transpose, 0"
+				},
+				{
+					"keys": "shift + M2",
+					"opens": "save project as: \\"unnamed 2\\", character 9 is \\"2\\""
+				}
+			],
+			"note": "hold M1 for a new project (the one open is saved first); shift + project opens the projects folder",
+			"units": [
+				"project.project-view",
+				"project.projects-folder"
+			],
+			"controls": []
+		},
+		{
+			"id": "com",
+			"name": "COM",
+			"area": "com",
+			"path": [
+				{
+					"keys": "com"
+				}
+			],
+			"screen": "com: multi-out midi",
+			"keys": [
+				{
+					"keys": "M1",
+					"opens": "system settings: system, brightness, 80"
+				},
+				{
+					"keys": "M2",
+					"opens": "controller mode: the keys and encoders send midi; shift + com leaves"
+				},
+				{
+					"keys": "M3",
+					"opens": "devices: computer, connected; clock both"
+				},
+				{
+					"keys": "M4",
+					"opens": "mtp mode: the computer can reach the files; M4 ejects. on a mac, open teenage engineering field kit to reach the files"
+				}
+			],
+			"units": [
+				"com.overview",
+				"com.bluetooth-midi",
+				"com.multi-out"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "bluetooth advertising",
+					"param": "bluetooth advertising",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "on",
+						"detents": 1,
+						"values": [
+							"off",
+							"on"
+						]
+					},
+					"about": "advertise the unit (clicking does the same)"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "multi-out",
+					"param": "multi-out",
+					"value": "midi",
+					"range": {
+						"first": "midi",
+						"last": "audio",
+						"detents": 5,
+						"values": [
+							"midi",
+							"sync8",
+							"sync16",
+							"sync24",
+							"cv/gate",
+							"audio"
+						]
+					}
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "charging",
+					"param": "charging",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "on",
+						"detents": 1,
+						"values": [
+							"off",
+							"on"
+						]
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "bluetooth advertising off → on"
+				}
+			]
+		},
+		{
+			"id": "instrument.m1.drumline",
+			"name": "drumline engine (M1; shift: model, random, pan, volume; click E1: play mode)",
+			"area": "instrument",
+			"track": 1,
+			"os": "1.2.0",
+			"path": [
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 1
+				},
+				{
+					"keys": "click E2"
+				}
+			],
+			"screen": "drumline kick key: pitch 50, length 50, punch 25, tone 00",
+			"shiftScreen": "drumline kick key (shift): play mode mute group 2, random 00, pan 49, volume 59",
+			"note": "the selected key is the one played last; its four values are named by its model (kick: pitch, length, punch, tone; hi-hat: pitch, length, era, tone; clap: tone, length, spread, contour …). plan_steps takes the label with key (F3–E5, or a model name for the first such key)",
+			"units": [
+				"instrument.engine-drumline"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "pitch",
+					"param": "pitch",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "the model's first value; the picture on screen changes with the model"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "length",
+					"param": "length",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "decay time of the key's hit"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "punch",
+					"param": "punch",
+					"value": "25",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "named by the model (punch, snare, era, attack, spread, slap, mod, sweep, shake, tone)"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "tone",
+					"param": "tone",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "named by the model (tone, punch, onset, contour, mush, feedback, rate, ring, strike)"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "model",
+					"param": "model",
+					"value": "kick",
+					"range": {
+						"first": "kick",
+						"last": "resonator",
+						"detents": 9,
+						"values": [
+							"kick",
+							"snare",
+							"hi-hat",
+							"shaker",
+							"clap",
+							"congas",
+							"fm",
+							"tom",
+							"tambourine",
+							"resonator"
+						]
+					},
+					"about": "steps kick … resonator"
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "random",
+					"param": "random",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "per-hit variation of this key"
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "pan",
+					"param": "pan",
+					"value": "49",
+					"range": {
+						"first": "0",
+						"last": "99",
+						"detents": 100,
+						"step": 1
+					},
+					"about": "centre 49"
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "volume",
+					"param": "volume",
+					"value": "59",
+					"range": {
+						"first": "01",
+						"last": "99",
+						"detents": 49,
+						"step": 2
+					},
+					"about": "59 is the unchanged level"
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"label": "play mode",
+					"does": "play mode mute group 2 → mute group 3",
+					"about": "steps key, oneshot, loop, mute group 1, 2, 3"
+				}
+			]
+		},
+		{
+			"id": "instrument.m2.drumline",
+			"name": "drumline kit (M2: funk, attack, random, length)",
+			"area": "instrument",
+			"track": 1,
+			"os": "1.2.0",
+			"path": [
+				{
+					"keys": "shift + M1"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": 1
+				},
+				{
+					"keys": "click E2"
+				},
+				{
+					"keys": "M2"
+				}
+			],
+			"screen": "drumline kit: funk 00, attack 00, random 00, length 50",
+			"shiftScreen": "play mode poly, portamento off, bend 2 semitones, volume 44",
+			"note": "acts on every key of the kit; a click of an encoder puts its value back",
+			"units": [
+				"instrument.drumline-kit"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "funk",
+					"param": "kit.funk",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "random lateness of every hit"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "attack",
+					"param": "kit.attack",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "fade-in of every hit"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "random",
+					"param": "kit.random",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "per-hit variation on every key"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "length",
+					"param": "kit.length",
+					"value": "50",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "decay of every key"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "play mode",
+					"param": "playMode.mode",
+					"value": "poly",
+					"range": {
+						"first": "poly",
+						"last": "legato",
+						"detents": 2,
+						"values": [
+							"poly",
+							"mono",
+							"legato"
+						]
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "portamento",
+					"param": "playMode.portamento",
+					"value": "off",
+					"range": {
+						"first": "off",
+						"last": "127",
+						"detents": 127,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "bend",
+					"param": "playMode.bend",
+					"value": "02",
+					"range": {
+						"first": "00",
+						"last": "12",
+						"detents": 8,
+						"values": [
+							"00",
+							"01",
+							"02",
+							"03",
+							"04",
+							"05",
+							"06",
+							"07",
+							"12"
+						],
+						"shows": [
+							{
+								"from": "00",
+								"to": "00",
+								"shows": "off"
+							},
+							{
+								"from": "01",
+								"to": "01",
+								"shows": "1 semitone"
+							},
+							{
+								"from": "02",
+								"to": "02",
+								"shows": "2 semitones"
+							},
+							{
+								"from": "03",
+								"to": "03",
+								"shows": "3 semitones"
+							},
+							{
+								"from": "04",
+								"to": "04",
+								"shows": "4 semitones"
+							},
+							{
+								"from": "05",
+								"to": "05",
+								"shows": "5 semitones"
+							},
+							{
+								"from": "06",
+								"to": "06",
+								"shows": "6 semitones"
+							},
+							{
+								"from": "07",
+								"to": "07",
+								"shows": "7 semitones"
+							},
+							{
+								"from": "12",
+								"to": "12",
+								"shows": "octave"
+							}
+						]
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "volume",
+					"param": "playMode.volume",
+					"value": "44",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "click E1",
+					"layer": "click",
+					"encoder": 1,
+					"does": "resets funk to 00"
+				},
+				{
+					"keys": "click E2",
+					"layer": "click",
+					"encoder": 2,
+					"does": "resets attack to 00"
+				},
+				{
+					"keys": "click E3",
+					"layer": "click",
+					"encoder": 3,
+					"does": "resets random to 00"
+				},
+				{
+					"keys": "click E4",
+					"layer": "click",
+					"encoder": 4,
+					"does": "resets length to 50"
+				}
+			]
+		},
+		{
+			"id": "instrument.m3.dynamic",
+			"name": "dynamic filter (M3: high pass, compress, drive, low pass)",
+			"area": "instrument",
+			"track": 3,
+			"os": "1.2.0",
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "shift + M3"
+				},
+				{
+					"keys": "turn E1",
+					"clicks": -2
+				},
+				{
+					"keys": "click E1"
+				},
+				{
+					"keys": "M3"
+				},
+				{
+					"keys": "M3"
+				}
+			],
+			"screen": "dynamic filter: high pass 00, compress 00, drive 00, low pass 99",
+			"shiftScreen": "sends: aux 00, tape 99, fx I 00, fx II 00",
+			"note": "off in a new project: M3 on this page switches it on and off; a strip over the whole track (not each voice): high pass, low pass, then compressor, then drive; the page shows no numbers; the M2 filter envelope no longer drives it",
+			"units": [
+				"instrument.filter-dynamic"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "high pass",
+					"param": "filter.cutoff",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "closes from the low end; 00 is open"
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "compress",
+					"param": "filter.resonance",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "compressor amount"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "drive",
+					"param": "filter.envAmount",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "saturation amount"
+				},
+				{
+					"keys": "turn E4",
+					"layer": "base",
+					"encoder": 4,
+					"label": "low pass",
+					"param": "filter.keyTracking",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					},
+					"about": "closes from the high end; 99 is open"
+				},
+				{
+					"keys": "shift + turn E1",
+					"layer": "shift",
+					"encoder": 1,
+					"label": "aux out",
+					"param": "sends.aux",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E2",
+					"layer": "shift",
+					"encoder": 2,
+					"label": "tape",
+					"param": "sends.tape",
+					"value": "99",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E3",
+					"layer": "shift",
+					"encoder": 3,
+					"label": "fx I",
+					"param": "sends.fx1",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				},
+				{
+					"keys": "shift + turn E4",
+					"layer": "shift",
+					"encoder": 4,
+					"label": "fx II",
+					"param": "sends.fx2",
+					"value": "00",
+					"range": {
+						"first": "00",
+						"last": "99",
+						"detents": 99,
+						"step": 1
+					}
+				}
+			]
+		},
+		{
+			"id": "instrument.preset-settings",
+			"name": "preset settings (shift + instrument; detune is new in OS 1.2)",
+			"area": "instrument",
+			"track": 3,
+			"os": "1.2.0",
+			"path": [
+				{
+					"keys": "T3"
+				},
+				{
+					"keys": "shift + instrument"
+				}
+			],
+			"screen": "preset settings of track 3: settings, high pass, 0",
+			"note": "E1 picks the tab (settings, mod), E2 the row, E3 turns its value. The settings tab: high pass, velocity sens, portamento type, tuning, tuning root, transpose, detune (−100…100 ct, new in OS 1.2), width. plan_steps takes the row name (\\"preset detune\\", \\"width\\", \\"preset transpose\\")",
+			"units": [
+				"instrument.preset-settings",
+				"instrument.preset-detune"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "tab",
+					"range": {
+						"first": "settings",
+						"last": "mod",
+						"detents": 1,
+						"values": [
+							"settings",
+							"mod"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "row",
+					"does": "settings: high pass, velocity sens, portamento type, tuning, tuning root, transpose, detune, width; mod: modwheel target, modwheel amount, aftertouch target, aftertouch amount, pitchbend target, pitchbend amount, velocity target, velocity amount"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "value",
+					"does": "turns the row’s value"
+				}
+			]
+		},
+		{
+			"id": "com.system-settings",
+			"name": "system settings on OS 1.2 (com, M1: tabs system … legal)",
+			"area": "com",
+			"os": "1.2.0",
+			"path": [
+				{
+					"keys": "com"
+				},
+				{
+					"keys": "M1"
+				}
+			],
+			"screen": "system settings: system, brightness, 80",
+			"note": "E1 picks the tab (system, midi, clock, pitchbend, battery, usb, monitor, legal), E2 the row, E3 the value. OS 1.2 has no keyboard tab: key velocity is the last row of the system tab, and usb is a new tab between battery and monitor",
+			"units": [
+				"com.system-settings",
+				"com.system-settings-os12"
+			],
+			"controls": [
+				{
+					"keys": "turn E1",
+					"layer": "base",
+					"encoder": 1,
+					"label": "tab",
+					"range": {
+						"first": "system",
+						"last": "legal",
+						"detents": 7,
+						"values": [
+							"system",
+							"midi",
+							"clock",
+							"pitchbend",
+							"battery",
+							"usb",
+							"monitor",
+							"legal"
+						]
+					}
+				},
+				{
+					"keys": "turn E2",
+					"layer": "base",
+					"encoder": 2,
+					"label": "row",
+					"does": "system: brightness, led brightness, country, power off, sample preview, key velocity; midi: clock, notes, other, active channel, midi echo; clock: year, month, day, hour, minute; pitchbend: left sensitivity, right sensitivity; battery: charge, input limit; usb: audio mode; monitor: waiting for midi; legal: version"
+				},
+				{
+					"keys": "turn E3",
+					"layer": "base",
+					"encoder": 3,
+					"label": "value",
+					"does": "turns the row’s value"
+				}
+			]
+		}
+	]
+}
+`;export{e as default};
